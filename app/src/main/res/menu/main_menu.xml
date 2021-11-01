@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_now_playing"
+        android:icon="@drawable/ic_now_playing_24"
+        android:title="@string/now_playing" />
+    <item
+        android:id="@+id/menu_popular"
+        android:icon="@drawable/fire"
+        android:title="@string/txt_Popular" />
+    <item
+        android:id="@+id/menu_up_coming"
+        android:icon="@drawable/ic_up_coming_24"
+        android:title="@string/up_coming" />
+</menu>

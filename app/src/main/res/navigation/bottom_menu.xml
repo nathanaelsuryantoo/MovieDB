@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_menu"
+    app:startDestination="@id/menu_now_playing">
+
+    <fragment
+        android:id="@+id/menu_now_playing"
+        android:name="com.example.moviedb.view.fragments.NowPlayingFragment"
+        android:label="@string/now_playing"
+        tools:layout="@layout/fragment_now_playing" >
+        <action
+            android:id="@+id/action_menu_now_playing_to_menu_movie_details"
+            app:destination="@id/menu_movie_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_up_coming"
+        android:name="com.example.moviedb.view.fragments.UpComingFragment"
+        android:label="@string/up_coming"
+        tools:layout="@layout/fragment_up_coming" >
+        <action
+            android:id="@+id/action_menu_up_coming_to_menu_movie_details"
+            app:destination="@id/menu_movie_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_popular"
+        android:name="com.example.moviedb.view.fragments.PopularFragment"
+        android:label="@string/txt_Popular"
+        tools:layout="@layout/fragment_popular" >
+        <action
+            android:id="@+id/action_menu_popular_to_menu_movie_details"
+            app:destination="@id/menu_movie_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_movie_details"
+        android:name="com.example.moviedb.view.fragments.MovieDetailsFragment"
+        android:label="@string/movie_details"
+        tools:layout="@layout/fragment_movie_details" >
+        <argument
+            android:name="movieId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_menu_movie_details_to_menu_popular"
+            app:destination="@id/menu_popular" />
+        <action
+            android:id="@+id/action_menu_movie_details_to_menu_now_playing"
+            app:destination="@id/menu_now_playing" />
+        <action
+            android:id="@+id/action_menu_movie_details_to_menu_up_coming"
+            app:destination="@id/menu_up_coming" />
+    </fragment>
+</navigation>
